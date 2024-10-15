@@ -39,7 +39,7 @@ jobs:
       #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Plan Terraform changes
-      run: terraform plan -out=tfplan
+      run: terraform plan -out=tfplan -lock=false
 
     # Add a prompt to ask the user whether to apply or destroy changes
     - name: Apply Terraform changes
